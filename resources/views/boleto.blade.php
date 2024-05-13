@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td><b>Identificador</b></td>
+        <td><b>Documento</b></td>
+        <td><b>Nome</b></td>
+        <td><b>Valor</b></td>
+        <td><b>Vencimento</b></td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>
+          {{$data[5]}}
+        </td>
+        <td>
+          {{$data[1]}}
+        </td>
+        <td>
+          {{$data[0]}}
+        </td>
+        <td>
+          {{$data[3]}}
+        </td>
+        <td>
+          {{$data[4]}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
