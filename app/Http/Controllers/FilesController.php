@@ -3,14 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Jobs\ProcessFile;
-use App\Models\Boleto;
 use App\Models\File;
-use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
-use PhpAmqpLib\Connection\AMQPStreamConnection;
-use PhpAmqpLib\Message\AMQPMessage;
 
 class FilesController extends Controller
 {
@@ -36,10 +33,6 @@ class FilesController extends Controller
             return response()->json($file);
         }
 
-        return response()->json("NOK");
-    }
-
-    function test(Request $request) {
-        return response()->json('HI');
+        return response()->json(null, Response::HTTP_BAD_REQUEST);
     }
 }
