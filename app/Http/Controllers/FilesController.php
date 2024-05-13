@@ -16,7 +16,6 @@ class FilesController extends Controller
         if ($request->hasFile('file') && $request->file('file')->isValid()) {
             $basePath = 'public';
             $filename = Str::uuid();
-            $extension = $request->file('file')->extension();
             $request->file('file')->storePubliclyAs($basePath, $filename.".csv");
             $path = Storage::url($basePath . '/' . $filename. '.csv');
 
